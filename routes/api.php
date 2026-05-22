@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Api\ServiceController;
+use App\Http\Controllers\Api\SubscriptionController;
 
 Route::apiResource("services", ServiceController::class); 
 Route::patch("services/{service}/activate", [ 
@@ -15,6 +16,7 @@ Route::patch("services/{service}/deactivate", [
     "deactivate", 
 ]); 
 
+Route::apiResource('subscriptions', SubscriptionController::class);
 
 Route::apiResource('customers', CustomerController::class);
 

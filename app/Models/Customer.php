@@ -24,4 +24,9 @@ class Customer extends Model
             'status' => 'boolean',
         ];
     }
+
+    public function subscriptions(): HasMany
+    {
+        return $this->hasMany(Subscription::class);
+    }
 }
