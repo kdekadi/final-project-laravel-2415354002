@@ -16,6 +16,7 @@ Route::patch("services/{service}/deactivate", [
     "deactivate", 
 ]); 
 
+Route::apiResource('subscriptions', SubscriptionController::class);
 
 Route::apiResource('customers', CustomerController::class);
 
